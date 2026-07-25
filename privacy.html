@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プライバシーポリシー — LGO</title>
+  <meta name="description" content="LGOのプライバシーポリシーです。個人情報の取り扱いについて説明しています。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --amber: #E8935A;
+      --gold:  #F0C674;
+      --dark:  #111111;
+      --gray:  #555555;
+      --light: #F7F5F2;
+      --white: #FFFFFF;
+      --border: #E8E4DF;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', 'Noto Sans JP', sans-serif;
+      background: var(--white);
+      color: var(--dark);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 20px 48px;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-size: 22px; font-weight: 900; letter-spacing: -0.03em;
+      background: linear-gradient(90deg, var(--amber), var(--gold));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      text-decoration: none;
+    }
+    .nav-back {
+      font-size: 13px; font-weight: 500; color: var(--gray);
+      text-decoration: none; display: flex; align-items: center; gap: 6px;
+      transition: color 0.2s;
+    }
+    .nav-back:hover { color: var(--dark); }
+
+    /* ── CONTENT ── */
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 140px 48px 100px;
+    }
+    .page-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.15em;
+      color: var(--amber); text-transform: uppercase; margin-bottom: 16px;
+    }
+    h1 {
+      font-size: 36px; font-weight: 800; letter-spacing: -0.02em;
+      line-height: 1.2; margin-bottom: 12px;
+    }
+    .page-date {
+      font-size: 13px; color: var(--gray); margin-bottom: 56px;
+    }
+    .intro {
+      font-size: 15px; color: var(--gray); line-height: 1.9;
+      font-weight: 300; margin-bottom: 48px;
+      padding-bottom: 48px; border-bottom: 1px solid var(--border);
+    }
+
+    /* 事業者情報テーブル */
+    .info-table {
+      width: 100%; border-collapse: collapse; margin-bottom: 48px;
+    }
+    .info-table tr { border-bottom: 1px solid var(--border); }
+    .info-table td { padding: 14px 0; font-size: 14px; vertical-align: top; }
+    .info-table td:first-child {
+      color: var(--gray); font-weight: 500; width: 120px; font-size: 13px;
+    }
+
+    /* 条項 */
+    .article {
+      margin-bottom: 48px;
+    }
+    .article h2 {
+      font-size: 17px; font-weight: 700; margin-bottom: 16px;
+      padding-bottom: 10px; border-bottom: 2px solid var(--amber);
+      display: inline-block;
+    }
+    .article p {
+      font-size: 14px; color: var(--gray); line-height: 1.9;
+      font-weight: 300; margin-bottom: 12px;
+    }
+    .article ul, .article ol {
+      padding-left: 20px; margin-top: 8px;
+    }
+    .article li {
+      font-size: 14px; color: var(--gray); line-height: 1.9;
+      font-weight: 300; margin-bottom: 6px;
+    }
+
+    /* 制定日 */
+    .dates {
+      margin-top: 64px; padding-top: 32px;
+      border-top: 1px solid var(--border);
+      font-size: 13px; color: var(--gray);
+    }
+    .dates p { margin-bottom: 4px; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--dark); border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 32px 48px;
+    }
+    .footer-inner {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 20px;
+    }
+    .footer-logo {
+      font-size: 16px; font-weight: 900;
+      background: linear-gradient(90deg, var(--amber), var(--gold));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .footer-nav { display: flex; gap: 24px; }
+    .footer-nav a {
+      font-size: 12px; color: rgba(255,255,255,0.4); text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-nav a:hover { color: rgba(255,255,255,0.8); }
+    .footer-bottom {
+      display: flex; justify-content: space-between; align-items: center;
+      padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    footer p { font-size: 11px; color: rgba(255,255,255,0.25); }
+    .footer-policy a {
+      font-size: 11px; color: rgba(255,255,255,0.4); text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 16px 24px; }
+      .container { padding: 100px 24px 72px; }
+      .footer-inner { flex-direction: column; gap: 16px; text-align: center; }
+      .footer-nav { flex-wrap: wrap; justify-content: center; }
+      .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">LGO</a>
+  <a href="/" class="nav-back">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M19 12H5M12 19l-7-7 7-7"/>
+    </svg>
+    トップへ戻る
+  </a>
+</nav>
+
+<!-- CONTENT -->
+<div class="container">
+  <div class="page-label">Privacy Policy</div>
+  <h1>プライバシーポリシー</h1>
+  <p class="page-date">制定日：2026年7月17日</p>
+
+  <p class="intro">LGO（以下「当方」）は、お客様の個人情報の保護を重要な責務と考え、個人情報の保護に関する法律（以下「個人情報保護法」）およびその関連法令を遵守します。本プライバシーポリシーは、当方が運営するウェブサイト（lgoofficial.com）における個人情報の取り扱いについて説明するものです。</p>
+
+  <div class="article">
+    <h2>第1条（事業者情報）</h2>
+    <table class="info-table">
+      <tr><td>屋号</td><td>LGO</td></tr>
+      <tr><td>代表者</td><td>藏谷 大樹</td></tr>
+      <tr><td>所在地</td><td>神奈川県横浜市栄区</td></tr>
+      <tr><td>連絡先</td><td>stuff@lgoofficial.com</td></tr>
+    </table>
+  </div>
+
+  <div class="article">
+    <h2>第2条（個人情報の定義）</h2>
+    <p>本プライバシーポリシーにおける「個人情報」とは、個人情報保護法第2条第1項に定める個人情報、すなわち生存する個人に関する情報であって、氏名・メールアドレス・その他の記述等により特定の個人を識別できるものをいいます。</p>
+  </div>
+
+  <div class="article">
+    <h2>第3条（収集する個人情報の種類）</h2>
+    <p>当方のウェブサイトにはお問い合わせフォームを設置しており、フォームご利用の際に以下の情報を取得します。</p>
+    <ul>
+      <li>氏名</li>
+      <li>会社名・屋号（任意）</li>
+      <li>メールアドレス</li>
+      <li>お問い合わせ内容</li>
+    </ul>
+    <p style="margin-top:12px;">なお、当ウェブサイトへのアクセスに伴うCookie・IPアドレス・閲覧履歴等の情報は、現時点では収集していません。</p>
+  </div>
+
+  <div class="article">
+    <h2>第4条（個人情報の利用目的）</h2>
+    <p>取得した個人情報は、以下の目的のためにのみ利用します。</p>
+    <ol>
+      <li>お問い合わせへの回答および対応</li>
+      <li>サービスに関するご案内・情報提供（お客様の同意を得た場合に限る）</li>
+      <li>法令上の義務を履行するため</li>
+    </ol>
+  </div>
+
+  <div class="article">
+    <h2>第5条（個人情報の第三者提供）</h2>
+    <p>当方は、以下のいずれかに該当する場合を除き、取得した個人情報を第三者に提供しません。</p>
+    <ol>
+      <li>お客様本人の同意を得た場合</li>
+      <li>法令に基づく場合（警察・裁判所等からの適法な要請など）</li>
+      <li>人の生命・身体または財産の保護のために必要があり、かつお客様本人の同意を得ることが困難な場合</li>
+    </ol>
+  </div>
+
+  <div class="article">
+    <h2>第6条（個人情報の管理）</h2>
+    <p>当方は、取得した個人情報の漏洩・滅失・毀損を防ぐため、合理的な安全管理措置を講じます。メールで受け取った個人情報は、業務上必要な期間のみ保持し、目的が達成された後は適切に削除します。</p>
+    <p>個人情報を取り扱う者は、代表者（藏谷 大樹）および業務上必要なシステム担当者に限定しており、目的外のアクセスを禁止しています。</p>
+  </div>
+
+  <div class="article">
+    <h2>第7条（個人情報の開示・訂正・削除等）</h2>
+    <p>お客様は、当方が保有するご自身の個人情報について、以下の権利を有します。</p>
+    <ol>
+      <li>利用目的の通知を求める権利</li>
+      <li>開示を求める権利</li>
+      <li>内容が事実と異なる場合に訂正・追加・削除を求める権利</li>
+      <li>利用停止または消去を求める権利</li>
+      <li>第三者への提供停止を求める権利</li>
+    </ol>
+    <p style="margin-top:12px;">これらをご希望の場合は、第8条に記載の連絡先までご連絡ください。ご本人確認のうえ、合理的な期間内に対応します。なお、対応にあたって手数料は発生しません。</p>
+  </div>
+
+  <div class="article">
+    <h2>第8条（お問い合わせ窓口）</h2>
+    <p>本プライバシーポリシーに関するご意見・ご質問・苦情、および個人情報に関するご請求は、以下の連絡先までお寄せください。</p>
+    <ul>
+      <li>メールアドレス：stuff@lgoofficial.com</li>
+      <li>対応時間：平日10:00〜18:00（土日祝・年末年始を除く）</li>
+    </ul>
+  </div>
+
+  <div class="article">
+    <h2>第9条（Cookie・アクセス解析について）</h2>
+    <p>現時点において、当ウェブサイトではCookieの使用およびGoogle Analytics等のアクセス解析ツールの導入は行っていません。</p>
+    <p>将来的にこれらを導入した場合は、本プライバシーポリシーを改定のうえ、収集する情報の種類・利用目的・オプトアウト方法等を追記します。</p>
+  </div>
+
+  <div class="article">
+    <h2>第10条（プライバシーポリシーの変更）</h2>
+    <p>当方は、法令の改正・サービス内容の変更・その他の事由により、本プライバシーポリシーを変更することがあります。変更後のプライバシーポリシーは、本ページに掲載した時点から効力を生じるものとします。</p>
+    <p>お問い合わせフォームの設置・アクセス解析ツールの導入等、個人情報の取り扱いに重要な変更が生じた場合は、本ページに改定日と改定内容を明記します。</p>
+  </div>
+
+  <div class="dates">
+    <p>制定日：2026年7月17日</p>
+    <p>改定日：—</p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">LGO</div>
+    <nav class="footer-nav">
+      <a href="/#about">理念</a>
+      <a href="/#services">サービス</a>
+      <a href="/#company">運営者情報</a>
+      <a href="/#contact">お問い合わせ</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 LGO. All rights reserved.</p>
+    <div class="footer-policy">
+      <a href="/privacy">プライバシーポリシー</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
