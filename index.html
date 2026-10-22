@@ -24,7 +24,7 @@
       --border: #E8E4DF;
     }
 
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; scroll-padding-top: 88px; }
     body {
       font-family: 'Inter', 'Noto Sans JP', sans-serif;
       background: var(--white);
@@ -34,7 +34,7 @@
     }
 
     /* ── NAV ── */
-    nav {
+    .site-nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       display: flex; align-items: center; justify-content: space-between;
       padding: 20px 48px;
@@ -303,7 +303,7 @@
 
     /* ── MOBILE ── */
     @media (max-width: 768px) {
-      nav { padding: 16px 24px; }
+      .site-nav { padding: 16px 24px; }
       .nav-links { display: none; }
       .hero { padding: 100px 24px 60px; }
       section { padding: 72px 24px; }
@@ -318,7 +318,7 @@
 <body>
 
 <!-- NAV -->
-<nav>
+<nav class="site-nav">
   <div class="nav-logo">LGO</div>
   <div class="nav-links">
     <a href="#about">理念</a>
